@@ -3,27 +3,20 @@ from django.contrib.auth.admin import UserAdmin
 from .models import User
 
 class CustomUserAdmin(UserAdmin):
-    # Define the fields to be displayed in the admin interface
+    list_display = (
+        'username', 'email', 'full_name', 'gender', 'credit_card_type', 
+        'credit_card_number', 'cvc', 'expiration_date', 'public_visibility', 
+        'age', 'birth_year', 'address', 'is_staff'
+    )
+    search_fields = ('username', 'email', 'full_name', 'credit_card_number', 'address')
+    ordering = ('username',)
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        ('Personal info', {'fields': ('full_name', 'gender', 'city', 'state')}),
-        ('Credit Card Information', {'fields': ('credit_card_type', 'credit_card_number', 'cvc', 'expiration_date')}),
+        ('Personal Info', {'fields': ('full_name', 'email', 'gender', 'age', 'birth_year', 'address')}),
+        ('Credit Card Info', {'fields': ('credit_card_type', 'credit_card_number', 'cvc', 'expiration_date')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
+        ('Visibility', {'fields': ('public_visibility',)}),
     )
 
-    # Fields to be used in creating and editing the user model
-    add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': ('username', 'password1', 'password2', 'full_name', 'gender', 'city', 'state', 'credit_card_type', 'credit_card_number', 'cvc', 'expiration_date'),
-        }),
-    )
-
-    # Fields to display in the list view
-    list_display = ('username', 'email', 'full_name', 'gender', 'city', 'state', 'is_staff')
-    search_fields = ('username', 'email', 'full_name', 'city', 'state')
-    ordering = ('username',)
-
-# Register the custom user admin class with the User model
 admin.site.register(User, CustomUserAdmin)

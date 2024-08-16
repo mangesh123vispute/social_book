@@ -63,6 +63,9 @@
       type="text/css"
       href="{% static 'vendors/styles/style.css' %}"
     />
+    {% block style %}
+
+    {% endblock %}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -522,31 +525,31 @@
       <div class="menu-block customscroll">
         <div class="sidebar-menu">
           <ul id="accordion-menu">
-            <li class="dropdown">
+            
               <a href="javascript:;" class="dropdown-toggle">
                 <span class="micon dw dw-house-1"></span
                 ><span class="mtext">Home</span>
               </a>
-              <ul class="submenu">
+              {% comment %} <ul class="submenu">
                 <li><a href="index.html">Dashboard style 1</a></li>
                 <li><a href="index2.html">Dashboard style 2</a></li>
-              </ul>
-            </li>
+              </ul> {% endcomment %}
+            
             <li class="dropdown">
               <a href="javascript:;" class="dropdown-toggle">
                 <span class="micon dw dw-edit2"></span
-                ><span class="mtext">Forms</span>
+                ><span class="mtext">Books</span>
               </a>
               <ul class="submenu">
-                <li><a href="form-basic.html">Form Basic</a></li>
-                <li>
+                <li><a href="{% url 'authors&sellers' %}">Authors and sellers</a></li>
+                {% comment %} <li>
                   <a href="advanced-components.html">Advanced Components</a>
                 </li>
                 <li><a href="form-wizard.html">Form Wizard</a></li>
                 <li><a href="html5-editor.html">HTML5 Editor</a></li>
                 <li><a href="form-pickers.html">Form Pickers</a></li>
                 <li><a href="image-cropper.html">Image Cropper</a></li>
-                <li><a href="image-dropzone.html">Image Dropzone</a></li>
+                <li><a href="image-dropzone.html">Image Dropzone</a></li> {% endcomment %}
               </ul>
             </li>
             <li class="dropdown">
@@ -742,7 +745,7 @@
     </div>
     <div class="mobile-menu-overlay"></div>
 
-    <div class="main-container">
+    {% comment %} <div class="main-container">
       <div class="pd-ltr-20">
         <div class="card-box pd-20 height-100-p mb-30">
           <div class="row align-items-center">
@@ -1071,7 +1074,11 @@
           >
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
+
+    {% block main-container %}
+
+    {% endblock %}
     <!-- js -->
     <script src="{% static 'vendors/scripts/core.js' %}"></script>
     <script src="{% static 'vendors/scripts/script.min.js' %}"></script>
@@ -1083,5 +1090,9 @@
     <script src="{% static 'src/plugins/datatables/js/dataTables.responsive.min.js' %}"></script>
     <script src="{% static 'src/plugins/datatables/js/responsive.bootstrap4.min.js' %}"></script>
     <script src="{% static 'vendors/scripts/dashboard.js' %}"></script>
+    
+    {% block script %}
+
+    {% endblock %}
   </body>
 </html>

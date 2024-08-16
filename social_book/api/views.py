@@ -60,3 +60,7 @@ def user_logout(request):
     return redirect('/')
  
     
+
+def authors_sellers(request):
+    authors_sellers=User.objects.filter(public_visibility=True)
+    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})

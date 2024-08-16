@@ -51,6 +51,30 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -160,6 +184,14 @@
         "description": "django.contrib.auth.base_user",
         "isExtraImport": true,
         "detail": "django.contrib.auth.base_user",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -278,11 +310,29 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "social_book.api.migrations.0002_user_address_user_age_user_birth_year_and_more",
+        "description": "social_book.api.migrations.0002_user_address_user_age_user_birth_year_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='address',\n            field=models.CharField(blank=True, max_length=255, null=True),\n        ),",
+        "detail": "social_book.api.migrations.0002_user_address_user_age_user_birth_year_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "social_book.api.migrations.0003_remove_user_city_remove_user_state",
+        "description": "social_book.api.migrations.0003_remove_user_city_remove_user_state",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0002_user_address_user_age_user_birth_year_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='user',\n            name='city',\n        ),\n        migrations.RemoveField(",
+        "detail": "social_book.api.migrations.0003_remove_user_city_remove_user_state",
+        "documentation": {}
+    },
+    {
         "label": "CustomUserAdmin",
         "kind": 6,
         "importPath": "social_book.api.admin",
         "description": "social_book.api.admin",
-        "peekOfCode": "class CustomUserAdmin(UserAdmin):\n    # Define the fields to be displayed in the admin interface\n    fieldsets = (\n        (None, {'fields': ('username', 'password')}),\n        ('Personal info', {'fields': ('full_name', 'gender', 'city', 'state')}),\n        ('Credit Card Information', {'fields': ('credit_card_type', 'credit_card_number', 'cvc', 'expiration_date')}),\n        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),\n        ('Important dates', {'fields': ('last_login', 'date_joined')}),\n    )\n    # Fields to be used in creating and editing the user model",
+        "peekOfCode": "class CustomUserAdmin(UserAdmin):\n    list_display = (\n        'username', 'email', 'full_name', 'gender', 'credit_card_type', \n        'credit_card_number', 'cvc', 'expiration_date', 'public_visibility', \n        'age', 'birth_year', 'address', 'is_staff'\n    )\n    search_fields = ('username', 'email', 'full_name', 'credit_card_number', 'address')\n    ordering = ('username',)\n    fieldsets = (\n        (None, {'fields': ('username', 'password')}),",
         "detail": "social_book.api.admin",
         "documentation": {}
     },
@@ -300,7 +350,7 @@
         "kind": 6,
         "importPath": "social_book.api.forms",
         "description": "social_book.api.forms",
-        "peekOfCode": "class UserRegistrationForm(forms.ModelForm):\n    password = forms.CharField(\n        label='Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control'})\n    )\n    password2 = forms.CharField(\n        label='Confirm Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control'})\n    )\n    email = forms.EmailField(",
+        "peekOfCode": "class UserRegistrationForm(forms.ModelForm):\n    password = forms.CharField(\n        label='Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password', })\n    )\n    password2 = forms.CharField(\n        label='Confirm Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control','type': 'password'})\n    )\n    email = forms.EmailField(",
         "detail": "social_book.api.forms",
         "documentation": {}
     },
@@ -318,7 +368,7 @@
         "kind": 5,
         "importPath": "social_book.api.forms",
         "description": "social_book.api.forms",
-        "peekOfCode": "User = get_user_model()\nclass UserRegistrationForm(forms.ModelForm):\n    password = forms.CharField(\n        label='Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control'})\n    )\n    password2 = forms.CharField(\n        label='Confirm Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control'})\n    )",
+        "peekOfCode": "User = get_user_model()\nclass UserRegistrationForm(forms.ModelForm):\n    password = forms.CharField(\n        label='Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control', 'type': 'password', })\n    )\n    password2 = forms.CharField(\n        label='Confirm Password',\n        widget=forms.PasswordInput(attrs={'class': 'form-control','type': 'password'})\n    )",
         "detail": "social_book.api.forms",
         "documentation": {}
     },
@@ -336,7 +386,7 @@
         "kind": 6,
         "importPath": "social_book.api.models",
         "description": "social_book.api.models",
-        "peekOfCode": "class User(AbstractUser):\n    full_name = models.CharField(max_length=255, blank=True, null=True)\n    gender = models.CharField(max_length=10, choices=[('Male', 'Male'), ('Female', 'Female')], blank=True, null=True)\n    city = models.CharField(max_length=100, blank=True, null=True)\n    state = models.CharField(max_length=100, blank=True, null=True)\n    credit_card_type = models.CharField(max_length=50, blank=True, null=True)\n    credit_card_number = models.CharField(max_length=20, blank=True, null=True)\n    cvc = models.CharField(max_length=4, blank=True, null=True)\n    expiration_date = models.DateField(blank=True, null=True)\n    def __str__(self):",
+        "peekOfCode": "class User(AbstractUser):\n    full_name = models.CharField(max_length=255, blank=True, null=True)\n    gender = models.CharField(max_length=10, choices=[('Male', 'Male'), ('Female', 'Female')], blank=True, null=True)\n    credit_card_type = models.CharField(max_length=50, blank=True, null=True)\n    credit_card_number = models.CharField(max_length=20, blank=True, null=True)\n    cvc = models.CharField(max_length=4, blank=True, null=True)\n    expiration_date = models.DateField(blank=True, null=True)\n    public_visibility = models.BooleanField(default=True)\n    age = models.IntegerField(blank=True, null=True)\n    birth_year = models.IntegerField(blank=True, null=True)",
         "detail": "social_book.api.models",
         "documentation": {}
     },
@@ -345,7 +395,7 @@
         "kind": 5,
         "importPath": "social_book.api.urls",
         "description": "social_book.api.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'),\n    path('login/', views.user_login,name='login'),\n    path('logout/', views.user_logout,name='logout'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'),\n    path('login/', views.user_login,name='login'),\n    path('logout/', views.user_logout,name='logout'),\n    path('authors&sellers/', views.authors_sellers,name='authors&sellers'),\n]",
         "detail": "social_book.api.urls",
         "documentation": {}
     },
@@ -372,7 +422,16 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def user_logout(request):\n    if request.user.is_authenticated:\n        logout(request)\n    return redirect('/')",
+        "peekOfCode": "def user_logout(request):\n    if request.user.is_authenticated:\n        logout(request)\n    return redirect('/')\ndef authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})",
+        "detail": "social_book.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "authors_sellers",
+        "kind": 2,
+        "importPath": "social_book.api.views",
+        "description": "social_book.api.views",
+        "peekOfCode": "def authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})",
         "detail": "social_book.api.views",
         "documentation": {}
     },

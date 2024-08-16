@@ -75,8 +75,7 @@
   </head>
 
   <body class="login-page">
-    {% if messages %}
-	  {% for message in messages %}
+    {% if messages %} {% for message in messages %}
     <div
       class="alert alert-{{ message.tags }} alert-dismissible fade show"
       role="alert"
@@ -91,8 +90,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    {% endfor %}
-	{% endif %} 
+    {% endfor %} {% endif %}
 
     <div class="login-header box-shadow">
       <div
@@ -105,7 +103,14 @@
         </div>
         <div class="login-menu">
           <ul>
-            <li><a href="{% url 'login' %}">Login</a></li>
+            <div class="row">
+              <div class="col me-3">
+                <li><a href="{% url 'login' %}">Login</a></li>
+              </div>
+              <div class="col">
+                <li><a href="{% url 'index' %}">Home</a></li>
+              </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -179,12 +184,20 @@
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">City</label>
-                        <div class="col-sm-8">{{ form.city }}</div>
+                        <label class="col-sm-4 col-form-label"
+                          >public_visibility</label
+                        >
+                        <div class="col-sm-8">{{ form.public_visibility }}</div>
                       </div>
                       <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">State</label>
-                        <div class="col-sm-8">{{ form.state }}</div>
+                        <label class="col-sm-4 col-form-label">Address</label>
+                        <div class="col-sm-8">{{ form.address }}</div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-4 col-form-label"
+                          >Bearth Year</label
+                        >
+                        <div class="col-sm-8">{{ form.birth_year }}</div>
                       </div>
                     </div>
                   </section>
@@ -218,90 +231,7 @@
                       </div>
                     </div>
                   </section>
-                  <!-- Step 4 -->
-                  <h5>Overview Information</h5>
-                  <section>
-                    <div class="form-wrap max-width-600 mx-auto">
-                      <ul class="register-info">
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">Username</div>
-                            <div class="col-sm-8">
-                              {{ form.username.value }}
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">Email Address</div>
-                            <div class="col-sm-8">{{ form.email.value }}</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">Full Name</div>
-                            <div class="col-sm-8">
-                              {{ form.full_name.value }}
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">Gender</div>
-                            <div class="col-sm-8">{{ form.gender.value }}</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">City</div>
-                            <div class="col-sm-8">{{ form.city.value }}</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">State</div>
-                            <div class="col-sm-8">{{ form.state.value }}</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">
-                              Credit Card Type
-                            </div>
-                            <div class="col-sm-8">
-                              {{ form.credit_card_type.value }}
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">
-                              Credit Card Number
-                            </div>
-                            <div class="col-sm-8">
-                              {{ form.credit_card_number.value }}
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">CVC</div>
-                            <div class="col-sm-8">{{ form.cvc.value }}</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-sm-4 weight-600">
-                              Expiration Date
-                            </div>
-                            <div class="col-sm-8">
-                              {{ form.expiration_date.value }}
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
+
                   <button type="submit" class="btn btn-primary">
                     Register
                   </button>
