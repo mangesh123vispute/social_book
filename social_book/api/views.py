@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import UserRegistrationForm
 from .forms import UserLoginForm
 from django.contrib import messages
+from .forms import UploadFileForm
+from .models import UploadedFile
 from django.contrib.auth import get_user_model
 
 User=get_user_model()
@@ -64,3 +66,18 @@ def user_logout(request):
 def authors_sellers(request):
     authors_sellers=User.objects.filter(public_visibility=True)
     return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})
+
+
+def upload_file(request):
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('uploaded_files')
+    else:
+        form = UploadFileForm()
+    return render(request, 'pages/upload_file.html', {'form': form})
+
+def uploaded_files(request):
+    files = UploadedFile.objects.all()
+    return render(request, 'pages/uploaded_files.html', {'files': files})

@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from datetime import datetime
+from django.core.validators import FileExtensionValidator
+
 
 class User(AbstractUser):
     full_name = models.CharField(max_length=255, blank=True, null=True)
@@ -23,3 +25,19 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
+class UploadedFile(models.Model):
+    TITLE_MAX_LENGTH = 255
+
+    title = models.CharField(max_length=TITLE_MAX_LENGTH)
+    description = models.TextField()
+    file = models.FileField(upload_to='uploads/', 
+                            validators=[FileExtensionValidator(['pdf', 'jpeg', 'jpg'])])
+    visibility = models.BooleanField(default=True)  
+    cost = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    year_published = models.IntegerField()
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

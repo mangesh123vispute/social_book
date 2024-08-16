@@ -526,7 +526,7 @@
         <div class="sidebar-menu">
           <ul id="accordion-menu">
             
-              <a href="javascript:;" class="dropdown-toggle">
+              <a href="{% url 'index' %}" class="dropdown-toggle">
                 <span class="micon dw dw-house-1"></span
                 ><span class="mtext">Home</span>
               </a>
@@ -541,7 +541,9 @@
                 ><span class="mtext">Books</span>
               </a>
               <ul class="submenu">
+                <li><a href="{% url 'upload' %}">Upload Books</a></li>
                 <li><a href="{% url 'authors&sellers' %}">Authors and sellers</a></li>
+                
                 {% comment %} <li>
                   <a href="advanced-components.html">Advanced Components</a>
                 </li>

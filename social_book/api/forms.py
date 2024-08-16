@@ -2,6 +2,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm
+from .models import UploadedFile
 User = get_user_model()
 
 class UserRegistrationForm(forms.ModelForm):
@@ -106,3 +107,13 @@ class UserLoginForm(AuthenticationForm):
     )
     password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control form-control-lg',
         'placeholder': '**********'}))
+
+
+class UploadFileForm(forms.ModelForm):
+    class Meta:
+        model = UploadedFile
+        fields = ['title', 'description', 'file', 'visibility', 'cost', 'year_published']
+
+    def __init__(self, *args, **kwargs):
+        super(UploadFileForm, self).__init__(*args, **kwargs)
+        self.fields['file'].widget.attrs.update({'accept': 'application/pdf,image/jpeg'})

@@ -75,11 +75,44 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.core.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "FileExtensionValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
         "documentation": {}
     },
     {
@@ -328,6 +361,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "social_book.api.migrations.0004_uploadedfile",
+        "description": "social_book.api.migrations.0004_uploadedfile",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0003_remove_user_city_remove_user_state'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UploadedFile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('title', models.CharField(max_length=255)),",
+        "detail": "social_book.api.migrations.0004_uploadedfile",
+        "documentation": {}
+    },
+    {
         "label": "CustomUserAdmin",
         "kind": 6,
         "importPath": "social_book.api.admin",
@@ -364,6 +406,15 @@
         "documentation": {}
     },
     {
+        "label": "UploadFileForm",
+        "kind": 6,
+        "importPath": "social_book.api.forms",
+        "description": "social_book.api.forms",
+        "peekOfCode": "class UploadFileForm(forms.ModelForm):\n    class Meta:\n        model = UploadedFile\n        fields = ['title', 'description', 'file', 'visibility', 'cost', 'year_published']\n    def __init__(self, *args, **kwargs):\n        super(UploadFileForm, self).__init__(*args, **kwargs)\n        self.fields['file'].widget.attrs.update({'accept': 'application/pdf,image/jpeg'})",
+        "detail": "social_book.api.forms",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 5,
         "importPath": "social_book.api.forms",
@@ -391,11 +442,20 @@
         "documentation": {}
     },
     {
+        "label": "UploadedFile",
+        "kind": 6,
+        "importPath": "social_book.api.models",
+        "description": "social_book.api.models",
+        "peekOfCode": "class UploadedFile(models.Model):\n    TITLE_MAX_LENGTH = 255\n    title = models.CharField(max_length=TITLE_MAX_LENGTH)\n    description = models.TextField()\n    file = models.FileField(upload_to='uploads/', \n                            validators=[FileExtensionValidator(['pdf', 'jpeg', 'jpg'])])\n    visibility = models.BooleanField(default=True)  \n    cost = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\n    year_published = models.IntegerField()\n    uploaded_at = models.DateTimeField(auto_now_add=True)",
+        "detail": "social_book.api.models",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "social_book.api.urls",
         "description": "social_book.api.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'),\n    path('login/', views.user_login,name='login'),\n    path('logout/', views.user_logout,name='logout'),\n    path('authors&sellers/', views.authors_sellers,name='authors&sellers'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'),\n    path('login/', views.user_login,name='login'),\n    path('logout/', views.user_logout,name='logout'),\n    path('authors&sellers/', views.authors_sellers,name='authors&sellers'),\n    path('upload/', views.upload_file,name='upload'),\n]",
         "detail": "social_book.api.urls",
         "documentation": {}
     },
@@ -422,7 +482,7 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def user_logout(request):\n    if request.user.is_authenticated:\n        logout(request)\n    return redirect('/')\ndef authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})",
+        "peekOfCode": "def user_logout(request):\n    if request.user.is_authenticated:\n        logout(request)\n    return redirect('/')\ndef authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})\ndef upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)",
         "detail": "social_book.api.views",
         "documentation": {}
     },
@@ -431,7 +491,25 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})",
+        "peekOfCode": "def authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})\ndef upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)\n        if form.is_valid():\n            form.save()\n            return redirect('uploaded_files')\n    else:",
+        "detail": "social_book.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "upload_file",
+        "kind": 2,
+        "importPath": "social_book.api.views",
+        "description": "social_book.api.views",
+        "peekOfCode": "def upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)\n        if form.is_valid():\n            form.save()\n            return redirect('uploaded_files')\n    else:\n        form = UploadFileForm()\n    return render(request, 'pages/upload_file.html', {'form': form})\ndef uploaded_files(request):",
+        "detail": "social_book.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "uploaded_files",
+        "kind": 2,
+        "importPath": "social_book.api.views",
+        "description": "social_book.api.views",
+        "peekOfCode": "def uploaded_files(request):\n    files = UploadedFile.objects.all()\n    return render(request, 'pages/uploaded_files.html', {'files': files})",
         "detail": "social_book.api.views",
         "documentation": {}
     },
