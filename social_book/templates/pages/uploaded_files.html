@@ -1,0 +1,119 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'vendors/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'vendors/images/favicon-32x32.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/styles/core.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/styles/icon-font.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'src/plugins/datatables/css/dataTables.bootstrap4.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'src/plugins/datatables/css/responsive.bootstrap4.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/styles/style.css' %}">
+{% endblock %}
+
+{% block main-container %}
+<div class="mobile-menu-overlay"></div>
+<div class="main-container">
+    <div class="container-fluid xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h4>Uploaded Books</h4>
+                        </div>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Uploaded Books: Double click to open any book</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-box mb-30">
+                <div class="pd-20">
+                    <h4 class="text-blue h4">Books Table</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table table hover multiple-select-row nowrap" id="filesTable">
+                        <thead>
+                            <tr>
+                                <th class="table-plus datatable-nosort">Title</th>
+                                <th>Description</th>
+                                <th>Cost</th>
+                                <th>Year Published</th>
+                                <th>Uploaded At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for file in files %}
+                            <tr ondblclick="window.open('{{ file.file.url }}', '_blank')">
+                                <td class="table-plus">{{ file.title }}</td>
+                                <td>{{ file.description }}</td>
+                                <td>{{ file.cost }}</td>
+                                <td>{{ file.year_published }}</td>
+                                <td>{{ file.uploaded_at }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-wrap pd-20 mb-20 card-box">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-left">
+                    <p class="mb-0">&copy; {{ year }} Your Company Name. Empowering Your Digital Journey.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <a href="/privacy-policy" class="mr-3">Privacy Policy</a>
+                    <a href="/terms-of-service" class="mr-3">Terms of Service</a>
+                    <a href="/contact-us">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'vendors/scripts/core.js' %}"></script>
+    <script src="{% static 'vendors/scripts/script.min.js' %}"></script>
+    <script src="{% static 'vendors/scripts/process.js' %}"></script>
+    <script src="{% static 'vendors/scripts/layout-settings.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/responsive.bootstrap4.min.js' %}"></script>
+    <!-- buttons for Export datatable -->
+    <script src="{% static 'src/plugins/datatables/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/buttons.print.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/buttons.flash.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/pdfmake.min.js' %}"></script>
+    <script src="{% static 'src/plugins/datatables/js/vfs_fonts.js' %}"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize the DataTable with options for pagination, search, and responsiveness
+            $('#filesTable').DataTable({
+                responsive: true, // Ensure the table is responsive
+                paging: true, // Enable pagination
+                searching: true, // Enable search functionality
+                pageLength: 10, // Set the number of entries to display per page
+                lengthChange: false, // Hide the page length change dropdown
+                destroy: true, // Destroy the previous instance if it exists
+                language: {
+                    search: "_INPUT_",
+                    searchPlaceholder: "Search files..."
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import User
-
+from .models import User, UploadedFile
 class CustomUserAdmin(UserAdmin):
     list_display = (
         'username', 'email', 'full_name', 'gender', 'credit_card_type', 
@@ -18,5 +17,22 @@ class CustomUserAdmin(UserAdmin):
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
         ('Visibility', {'fields': ('public_visibility',)}),
     )
+
+@admin.register(UploadedFile)
+class UploadedFileAdmin(admin.ModelAdmin):
+    list_display = ('title', 'visibility', 'cost', 'year_published','uploaded_at')
+    list_filter = ('visibility', 'year_published')
+    search_fields = ('title', 'description')
+    ordering = ('-uploaded_at',)
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'description', 'file', 'visibility', 'cost', 'year_published')
+        }),
+        ('Advanced options', {
+            'classes': ('collapse',),
+            'fields': ('uploaded_at',),
+        }),
+    )
+    readonly_fields = ('uploaded_at',)
 
 admin.site.register(User, CustomUserAdmin)

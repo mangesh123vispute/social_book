@@ -110,10 +110,37 @@ class UserLoginForm(AuthenticationForm):
 
 
 class UploadFileForm(forms.ModelForm):
+    title = forms.CharField(
+        required=True,
+        label='Title',
+        widget=forms.TextInput(attrs={'class': 'form-control', 'type': 'text'})
+    )
+    description = forms.CharField(
+        required=True,
+        label='Description',
+        widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 5})
+    )
+    file = forms.FileField(
+        required=True,
+        label='File',
+        widget=forms.ClearableFileInput(attrs={'class': 'form-control-file', 'accept': 'application/pdf,image/jpeg'})
+    )
+    visibility = forms.BooleanField(
+        required=False,
+        label='Public Visibility',
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input mt-2 ml-2', 'type': 'checkbox'})
+    )
+    cost = forms.DecimalField(
+        required=True,
+        label='Cost',
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'type': 'number', 'step': '0.01'})
+    )
+    year_published = forms.IntegerField(
+        required=True,
+        label='Year Published',
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'})
+    )
+
     class Meta:
         model = UploadedFile
         fields = ['title', 'description', 'file', 'visibility', 'cost', 'year_published']
-
-    def __init__(self, *args, **kwargs):
-        super(UploadFileForm, self).__init__(*args, **kwargs)
-        self.fields['file'].widget.attrs.update({'accept': 'application/pdf,image/jpeg'})

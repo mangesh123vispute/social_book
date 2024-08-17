@@ -73,7 +73,7 @@ def upload_file(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('uploaded_files')
+            return redirect('/api/upload')
     else:
         form = UploadFileForm()
     return render(request, 'pages/upload_file.html', {'form': form})
