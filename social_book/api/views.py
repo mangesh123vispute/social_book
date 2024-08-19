@@ -88,3 +88,8 @@ def upload_file(request):
 def uploaded_files(request):
     files = UploadedFile.objects.all()
     return render(request, 'pages/uploaded_files.html', {'files': files})
+
+@login_required
+def user_profile(request):
+    books=UploadedFile.objects.filter(user=request.user)
+    return render(request, 'user/profile.html',{'books':books})

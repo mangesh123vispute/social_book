@@ -791,7 +791,7 @@
         "kind": 5,
         "importPath": "social_book.api.urls",
         "description": "social_book.api.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'),\n    path('login/', views.user_login,name='login'),\n    path('logout/', views.user_logout,name='logout'),\n    path('authors&sellers/', views.authors_sellers,name='authors&sellers'),\n    path('upload/', views.upload_file,name='upload'),\n    path('uploaded_files/', views.uploaded_files,name='uploaded_files'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'),\n    path('login/', views.user_login,name='login'),\n    path('logout/', views.user_logout,name='logout'),\n    path('authors&sellers/', views.authors_sellers,name='authors&sellers'),\n    path('upload/', views.upload_file,name='upload'),\n    path('uploaded_files/', views.uploaded_files,name='uploaded_files'),\n    path('profile', views.user_profile,name='profile'),\n]",
         "detail": "social_book.api.urls",
         "documentation": {}
     },
@@ -845,7 +845,16 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def uploaded_files(request):\n    files = UploadedFile.objects.all()\n    return render(request, 'pages/uploaded_files.html', {'files': files})",
+        "peekOfCode": "def uploaded_files(request):\n    files = UploadedFile.objects.all()\n    return render(request, 'pages/uploaded_files.html', {'files': files})\n@login_required\ndef user_profile(request):\n    books=UploadedFile.objects.filter(user=request.user)\n    return render(request, 'user/profile.html',{'books':books})",
+        "detail": "social_book.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "user_profile",
+        "kind": 2,
+        "importPath": "social_book.api.views",
+        "description": "social_book.api.views",
+        "peekOfCode": "def user_profile(request):\n    books=UploadedFile.objects.filter(user=request.user)\n    return render(request, 'user/profile.html',{'books':books})",
         "detail": "social_book.api.views",
         "documentation": {}
     },
