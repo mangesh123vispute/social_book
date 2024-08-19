@@ -7,6 +7,7 @@ from django.contrib import messages
 from .forms import UploadFileForm
 from .models import UploadedFile
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 
 User=get_user_model()
 
@@ -43,17 +44,20 @@ def user_login(request):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            print("username", username, "password", password)
             user = authenticate(username=username, password=password)
             if user is not None:    
                 login(request, user)
-                messages.success(request, "You have successfully logged in!!")
+                messages.success(request, "You have successfully logged in!")
                 return redirect('/')  
             else:
-                return render(request, 'user/login.html', {'form': form, 'error': 'Invalid credentials'})
+                messages.error(request, "Invalid credentials. Please try again.")
+        else:
+            messages.error(request, "Invalid credentials. Please try again.")
     else:
         form = UserLoginForm()
+        
     return render(request, 'user/login.html', {'form': form})
+
 
 
 def user_logout(request):
@@ -68,11 +72,14 @@ def authors_sellers(request):
     return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})
 
 
+@login_required
 def upload_file(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            uploaded_file = form.save(commit=False)  
+            uploaded_file.user = request.user 
+            uploaded_file.save()  
             return redirect('/api/upload')
     else:
         form = UploadFileForm()

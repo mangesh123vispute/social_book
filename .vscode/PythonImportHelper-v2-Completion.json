@@ -26,95 +26,6 @@
         "documentation": {}
     },
     {
-        "label": "django.utils.timezone",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.utils.timezone",
-        "description": "django.utils.timezone",
-        "detail": "django.utils.timezone",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "django.core.validators",
         "kind": 6,
         "isExtraImport": true,
@@ -129,6 +40,72 @@
         "description": "django.core.validators",
         "isExtraImport": true,
         "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -156,11 +133,27 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "UserAdmin",
         "importPath": "django.contrib.auth.admin",
         "description": "django.contrib.auth.admin",
         "isExtraImport": true,
         "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -220,6 +213,14 @@
         "documentation": {}
     },
     {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
         "label": "AuthenticationForm",
         "importPath": "django.contrib.auth.forms",
         "description": "django.contrib.auth.forms",
@@ -241,6 +242,32 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
         "documentation": {}
     },
     {
@@ -324,7 +351,31 @@
         "documentation": {}
     },
     {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
         "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -380,6 +431,78 @@
         "documentation": {}
     },
     {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
+        "isExtraImport": true,
+        "detail": "djoser.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UploadedFile",
+        "importPath": "api.models",
+        "description": "api.models",
+        "isExtraImport": true,
+        "detail": "api.models",
+        "documentation": {}
+    },
+    {
+        "label": "UploadedFile",
+        "importPath": "api.models",
+        "description": "api.models",
+        "isExtraImport": true,
+        "detail": "api.models",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -402,14 +525,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -444,42 +559,6 @@
         "description": "social_book.api.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
         "detail": "social_book.api.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "social_book.api.migrations.0002_user_address_user_age_user_birth_year_and_more",
-        "description": "social_book.api.migrations.0002_user_address_user_age_user_birth_year_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='address',\n            field=models.CharField(blank=True, max_length=255, null=True),\n        ),",
-        "detail": "social_book.api.migrations.0002_user_address_user_age_user_birth_year_and_more",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "social_book.api.migrations.0003_remove_user_city_remove_user_state",
-        "description": "social_book.api.migrations.0003_remove_user_city_remove_user_state",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0002_user_address_user_age_user_birth_year_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='user',\n            name='city',\n        ),\n        migrations.RemoveField(",
-        "detail": "social_book.api.migrations.0003_remove_user_city_remove_user_state",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "social_book.api.migrations.0004_uploadedfile",
-        "description": "social_book.api.migrations.0004_uploadedfile",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0003_remove_user_city_remove_user_state'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UploadedFile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('title', models.CharField(max_length=255)),",
-        "detail": "social_book.api.migrations.0004_uploadedfile",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "social_book.api.migrations.0005_alter_uploadedfile_file",
-        "description": "social_book.api.migrations.0005_alter_uploadedfile_file",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('api', '0004_uploadedfile'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='uploadedfile',\n            name='file',\n            field=models.FileField(upload_to='uploads/', validators=[django.core.validators.FileExtensionValidator(['pdf', 'jpeg', 'jpg'])]),\n        ),",
-        "detail": "social_book.api.migrations.0005_alter_uploadedfile_file",
         "documentation": {}
     },
     {
@@ -573,6 +652,87 @@
         "documentation": {}
     },
     {
+        "label": "data",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "data = {\n    'Column1': np.random.randint(1, 100, size=10),\n    'Column2': np.random.randint(1, 100, size=10),\n    'Column3': np.random.randint(1, 100, size=10)\n}\ndf = pd.DataFrame(data)\nprint(\"Task 2: DataFrame Created (10x3)\\n\", df, \"\\n\")\n# Task 3: \nfilter_value = 50\nfiltered_df = df[df['Column1'] > filter_value]",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "df = pd.DataFrame(data)\nprint(\"Task 2: DataFrame Created (10x3)\\n\", df, \"\\n\")\n# Task 3: \nfilter_value = 50\nfiltered_df = df[df['Column1'] > filter_value]\nprint(f\"Task 3: DataFrame Filtered (Column1 > {filter_value})\\n\", filtered_df, \"\\n\")\n# Task 4: \nfiltered_df_2cols = df[['Column1', 'Column2']]\nprint(\"Task 4: DataFrame with 2 Columns (Column1 and Column2)\\n\", filtered_df_2cols, \"\\n\")\n# Task 5:",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "filter_value",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "filter_value = 50\nfiltered_df = df[df['Column1'] > filter_value]\nprint(f\"Task 3: DataFrame Filtered (Column1 > {filter_value})\\n\", filtered_df, \"\\n\")\n# Task 4: \nfiltered_df_2cols = df[['Column1', 'Column2']]\nprint(\"Task 4: DataFrame with 2 Columns (Column1 and Column2)\\n\", filtered_df_2cols, \"\\n\")\n# Task 5:\ndf['Column2'] = df['Column2'].apply(lambda x: 80 if x > 80 else x)\nprint(\"Task 5: DataFrame After Replacing Values in Column2 (values > 80 are replaced with 80)\\n\", df, \"\\n\")\n# Task 6: ",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "filtered_df",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "filtered_df = df[df['Column1'] > filter_value]\nprint(f\"Task 3: DataFrame Filtered (Column1 > {filter_value})\\n\", filtered_df, \"\\n\")\n# Task 4: \nfiltered_df_2cols = df[['Column1', 'Column2']]\nprint(\"Task 4: DataFrame with 2 Columns (Column1 and Column2)\\n\", filtered_df_2cols, \"\\n\")\n# Task 5:\ndf['Column2'] = df['Column2'].apply(lambda x: 80 if x > 80 else x)\nprint(\"Task 5: DataFrame After Replacing Values in Column2 (values > 80 are replaced with 80)\\n\", df, \"\\n\")\n# Task 6: \ndata2 = {",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "filtered_df_2cols",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "filtered_df_2cols = df[['Column1', 'Column2']]\nprint(\"Task 4: DataFrame with 2 Columns (Column1 and Column2)\\n\", filtered_df_2cols, \"\\n\")\n# Task 5:\ndf['Column2'] = df['Column2'].apply(lambda x: 80 if x > 80 else x)\nprint(\"Task 5: DataFrame After Replacing Values in Column2 (values > 80 are replaced with 80)\\n\", df, \"\\n\")\n# Task 6: \ndata2 = {\n    'Column1': np.random.randint(1, 100, size=10),\n    'Column2': np.random.randint(1, 100, size=10),\n    'Column3': np.random.randint(1, 100, size=10)",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "df['Column2']",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "df['Column2'] = df['Column2'].apply(lambda x: 80 if x > 80 else x)\nprint(\"Task 5: DataFrame After Replacing Values in Column2 (values > 80 are replaced with 80)\\n\", df, \"\\n\")\n# Task 6: \ndata2 = {\n    'Column1': np.random.randint(1, 100, size=10),\n    'Column2': np.random.randint(1, 100, size=10),\n    'Column3': np.random.randint(1, 100, size=10)\n}\ndf2 = pd.DataFrame(data2)\nappended_df = pd.concat([df, df2], ignore_index=True)",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "data2",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "data2 = {\n    'Column1': np.random.randint(1, 100, size=10),\n    'Column2': np.random.randint(1, 100, size=10),\n    'Column3': np.random.randint(1, 100, size=10)\n}\ndf2 = pd.DataFrame(data2)\nappended_df = pd.concat([df, df2], ignore_index=True)\nprint(\"Task 6: Appended DataFrame\\n\", appended_df)",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "df2",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "df2 = pd.DataFrame(data2)\nappended_df = pd.concat([df, df2], ignore_index=True)\nprint(\"Task 6: Appended DataFrame\\n\", appended_df)",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
+        "label": "appended_df",
+        "kind": 5,
+        "importPath": "social_book.api.pandas&Num",
+        "description": "social_book.api.pandas&Num",
+        "peekOfCode": "appended_df = pd.concat([df, df2], ignore_index=True)\nprint(\"Task 6: Appended DataFrame\\n\", appended_df)",
+        "detail": "social_book.api.pandas&Num",
+        "documentation": {}
+    },
+    {
         "label": "Book",
         "kind": 6,
         "importPath": "social_book.api.sqlalchemy_config",
@@ -649,7 +809,7 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def user_login(request):\n    if request.method == 'POST':\n        form = UserLoginForm(data=request.POST)\n        if form.is_valid():\n            username = form.cleaned_data.get('username')\n            password = form.cleaned_data.get('password')\n            print(\"username\", username, \"password\", password)\n            user = authenticate(username=username, password=password)\n            if user is not None:    \n                login(request, user)",
+        "peekOfCode": "def user_login(request):\n    if request.method == 'POST':\n        form = UserLoginForm(data=request.POST)\n        if form.is_valid():\n            username = form.cleaned_data.get('username')\n            password = form.cleaned_data.get('password')\n            user = authenticate(username=username, password=password)\n            if user is not None:    \n                login(request, user)\n                messages.success(request, \"You have successfully logged in!\")",
         "detail": "social_book.api.views",
         "documentation": {}
     },
@@ -658,7 +818,7 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def user_logout(request):\n    if request.user.is_authenticated:\n        logout(request)\n    return redirect('/')\ndef authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})\ndef upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)",
+        "peekOfCode": "def user_logout(request):\n    if request.user.is_authenticated:\n        logout(request)\n    return redirect('/')\ndef authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})\n@login_required\ndef upload_file(request):\n    if request.method == 'POST':",
         "detail": "social_book.api.views",
         "documentation": {}
     },
@@ -667,7 +827,7 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})\ndef upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)\n        if form.is_valid():\n            form.save()\n            return redirect('/api/upload')\n    else:",
+        "peekOfCode": "def authors_sellers(request):\n    authors_sellers=User.objects.filter(public_visibility=True)\n    return render(request, 'pages/Authors&Sellers.html',{'authors_sellers':authors_sellers})\n@login_required\ndef upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)\n        if form.is_valid():\n            uploaded_file = form.save(commit=False)  \n            uploaded_file.user = request.user ",
         "detail": "social_book.api.views",
         "documentation": {}
     },
@@ -676,7 +836,7 @@
         "kind": 2,
         "importPath": "social_book.api.views",
         "description": "social_book.api.views",
-        "peekOfCode": "def upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)\n        if form.is_valid():\n            form.save()\n            return redirect('/api/upload')\n    else:\n        form = UploadFileForm()\n    return render(request, 'pages/upload_file.html', {'form': form})\ndef uploaded_files(request):",
+        "peekOfCode": "def upload_file(request):\n    if request.method == 'POST':\n        form = UploadFileForm(request.POST, request.FILES)\n        if form.is_valid():\n            uploaded_file = form.save(commit=False)  \n            uploaded_file.user = request.user \n            uploaded_file.save()  \n            return redirect('/api/upload')\n    else:\n        form = UploadFileForm()",
         "detail": "social_book.api.views",
         "documentation": {}
     },
@@ -687,6 +847,60 @@
         "description": "social_book.api.views",
         "peekOfCode": "def uploaded_files(request):\n    files = UploadedFile.objects.all()\n    return render(request, 'pages/uploaded_files.html', {'files': files})",
         "detail": "social_book.api.views",
+        "documentation": {}
+    },
+    {
+        "label": "DjoserauthapiConfig",
+        "kind": 6,
+        "importPath": "social_book.djoserauthapi.apps",
+        "description": "social_book.djoserauthapi.apps",
+        "peekOfCode": "class DjoserauthapiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'djoserauthapi'",
+        "detail": "social_book.djoserauthapi.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "kind": 6,
+        "importPath": "social_book.djoserauthapi.serializers",
+        "description": "social_book.djoserauthapi.serializers",
+        "peekOfCode": "class UserCreateSerializer(UserCreateSerializer):\n    class Meta(UserCreateSerializer.Meta):\n        model = User\n        fields = ('id', 'name', 'email', 'password', 'username')  \nclass UploadedFileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UploadedFile\n        fields = ['id', 'title', 'description', 'file', 'visibility', 'cost', 'year_published', 'uploaded_at']",
+        "detail": "social_book.djoserauthapi.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UploadedFileSerializer",
+        "kind": 6,
+        "importPath": "social_book.djoserauthapi.serializers",
+        "description": "social_book.djoserauthapi.serializers",
+        "peekOfCode": "class UploadedFileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UploadedFile\n        fields = ['id', 'title', 'description', 'file', 'visibility', 'cost', 'year_published', 'uploaded_at']",
+        "detail": "social_book.djoserauthapi.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "social_book.djoserauthapi.serializers",
+        "description": "social_book.djoserauthapi.serializers",
+        "peekOfCode": "User = get_user_model()\nclass UserCreateSerializer(UserCreateSerializer):\n    class Meta(UserCreateSerializer.Meta):\n        model = User\n        fields = ('id', 'name', 'email', 'password', 'username')  \nclass UploadedFileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UploadedFile\n        fields = ['id', 'title', 'description', 'file', 'visibility', 'cost', 'year_published', 'uploaded_at']",
+        "detail": "social_book.djoserauthapi.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "social_book.djoserauthapi.urls",
+        "description": "social_book.djoserauthapi.urls",
+        "peekOfCode": "urlpatterns = [\n    path('auth/', include('djoser.urls')),  # Updated line\n    path('auth/', include('djoser.urls.jwt')),  # If using JWT authentication\n    path('user/files/', UserFilesView.as_view(), name='user-files'),\n]",
+        "detail": "social_book.djoserauthapi.urls",
+        "documentation": {}
+    },
+    {
+        "label": "UserFilesView",
+        "kind": 6,
+        "importPath": "social_book.djoserauthapi.views",
+        "description": "social_book.djoserauthapi.views",
+        "peekOfCode": "class UserFilesView(APIView):\n    permission_classes = [IsAuthenticated]\n    def get(self, request):\n        user = request.user\n        uploaded_files = UploadedFile.objects.filter(user=user)\n        if not uploaded_files.exists():\n            return Response({\"detail\": \"No files found for this user.\"}, status=status.HTTP_404_NOT_FOUND)\n        serializer = UploadedFileSerializer(uploaded_files, many=True)\n        return Response(serializer.data, status=status.HTTP_200_OK)",
+        "detail": "social_book.djoserauthapi.views",
         "documentation": {}
     },
     {
@@ -748,7 +962,7 @@
         "kind": 5,
         "importPath": "social_book.social_book.settings",
         "description": "social_book.social_book.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'social_book.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    \"corsheaders.middleware.CorsMiddleware\",\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "social_book.social_book.settings",
         "documentation": {}
     },
@@ -847,7 +1061,7 @@
         "kind": 5,
         "importPath": "social_book.social_book.settings",
         "description": "social_book.social_book.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'api.User'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "AUTH_USER_MODEL = 'api.User'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Djoser settings ",
         "detail": "social_book.social_book.settings",
         "documentation": {}
     },
@@ -856,7 +1070,7 @@
         "kind": 5,
         "importPath": "social_book.social_book.settings",
         "description": "social_book.social_book.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Djoser settings \nDJOSER = {",
         "detail": "social_book.social_book.settings",
         "documentation": {}
     },
@@ -865,7 +1079,7 @@
         "kind": 5,
         "importPath": "social_book.social_book.settings",
         "description": "social_book.social_book.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Djoser settings \nDJOSER = {\n    'LOGIN_FIELD': 'email',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'ACTIVATION_URL': '/activate/{uid}/{token}',",
         "detail": "social_book.social_book.settings",
         "documentation": {}
     },
@@ -874,7 +1088,7 @@
         "kind": 5,
         "importPath": "social_book.social_book.settings",
         "description": "social_book.social_book.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Djoser settings \nDJOSER = {\n    'LOGIN_FIELD': 'email',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'ACTIVATION_URL': '/activate/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,",
         "detail": "social_book.social_book.settings",
         "documentation": {}
     },
@@ -883,7 +1097,97 @@
         "kind": 5,
         "importPath": "social_book.social_book.settings",
         "description": "social_book.social_book.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Djoser settings \nDJOSER = {\n    'LOGIN_FIELD': 'email',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'ACTIVATION_URL': '/activate/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'SEND_CONFIRMATION_EMAIL': True,\n    'PASSWORD_CHANGE_EMAIL_CONFIRMATION': True,\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DJOSER",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "DJOSER = {\n    'LOGIN_FIELD': 'email',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'ACTIVATION_URL': '/activate/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'SEND_CONFIRMATION_EMAIL': True,\n    'PASSWORD_CHANGE_EMAIL_CONFIRMATION': True,\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',\n    'SET_PASSWORD_RETYPE': True,\n    'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    \"http://localhost:3000\",\n    \"http://127.0.0.1:3000\"\n]\n# Rest framework settings \nREST_FRAMEWORK = {\n    'DEFAULT_PERMISSION_CLASS': (\n        'rest_framework.permissions.IsAuthenticated'\n    ),\n    'DEFAULT_AUTHENTICATION_CLASSES': (",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PERMISSION_CLASS': (\n        'rest_framework.permissions.IsAuthenticated'\n    ),\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n}\nSIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('JWT',),",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(minutes=5),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=1),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"UPDATE_LAST_LOGIN\": True,\n}\n# Email settings \nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = 'mangesh2003vispute@gmail.com'\nEMAIL_HOST_PASSWORD = 'bxnd nvlx eazh nbcz'\nEMAIL_PORT = 587    \nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = 'mangesh2003vispute@gmail.com'\nEMAIL_HOST_PASSWORD = 'bxnd nvlx eazh nbcz'\nEMAIL_PORT = 587    \nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "EMAIL_HOST_USER = 'mangesh2003vispute@gmail.com'\nEMAIL_HOST_PASSWORD = 'bxnd nvlx eazh nbcz'\nEMAIL_PORT = 587    \nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = 'bxnd nvlx eazh nbcz'\nEMAIL_PORT = 587    \nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "EMAIL_PORT = 587    \nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
+        "detail": "social_book.social_book.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "social_book.social_book.settings",
+        "description": "social_book.social_book.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
         "detail": "social_book.social_book.settings",
         "documentation": {}
     },
@@ -892,7 +1196,7 @@
         "kind": 5,
         "importPath": "social_book.social_book.urls",
         "description": "social_book.social_book.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('backend_api/', include('api.urls')),\n    path('api-auth/', include('rest_framework.urls')),\n    path('auth/', include('djoser.urls')),  # Updated line\n    path('auth/', include('djoser.urls.jwt')),  # If using JWT authentication\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('admin/', admin.site.urls),\n    path('api/', include('api.urls')),\n    path('djoser/', include('djoserauthapi.urls')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "social_book.social_book.urls",
         "documentation": {}
     },

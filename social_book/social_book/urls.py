@@ -8,11 +8,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
-    path('backend_api/', include('api.urls')),
-    path('api-auth/', include('rest_framework.urls')),
-    path('auth/', include('djoser.urls')),  # Updated line
-    path('auth/', include('djoser.urls.jwt')),  # If using JWT authentication
-
+    path('api/', include('api.urls')),
+    path('djoser/', include('djoserauthapi.urls')),
 ]
 
 if settings.DEBUG:
