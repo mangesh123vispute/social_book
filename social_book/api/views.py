@@ -1,5 +1,5 @@
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect , get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserRegistrationForm
 from .forms import UserLoginForm
@@ -8,6 +8,12 @@ from .forms import UploadFileForm
 from .models import UploadedFile
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from .utils import send_otp
+from datetime import datetime
+from django.core.mail import send_mail
+from django.conf import settings
+import pyotp  # type: ignore
+
 
 User=get_user_model()
 
@@ -46,9 +52,10 @@ def user_login(request):
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
             if user is not None:    
-                login(request, user)
-                messages.success(request, "You have successfully logged in!")
-                return redirect('/')  
+                send_otp(request,user)
+                request.session['username'] = username
+                messages.success(request, "OTP has been sent to your email.")
+                return redirect('otp')  
             else:
                 messages.error(request, "Invalid credentials. Please try again.")
         else:
@@ -58,11 +65,54 @@ def user_login(request):
         
     return render(request, 'user/login.html', {'form': form})
 
+def otp_view(request):
+    if request.method == 'POST':
+        print('I am getting called',request.POST)
+        otp = request.POST['otp']
+        username=request.session['username']
+        otp_secret_key=request.session['otp_secret_key']
+        otp_valid_until=request.session['otp_valid_date']
+
+        if otp_secret_key and otp_valid_until is not None:
+            valid_until=datetime.fromisoformat(otp_valid_until)
+            if valid_until > datetime.now():
+                totp = pyotp.TOTP(otp_secret_key, interval=60)
+                if totp.verify(otp):
+                    user = get_object_or_404(User, username=username)
+                    login(request, user)
+                    print("Login successful!")
+
+                     # Send email notification
+                    subject = 'Login Successful'
+                    message = 'You have successfully logged in to your account.'
+                    from_email = settings.EMAIL_HOST_USER
+                    to_email = user.email
+
+                    try:
+                        send_mail(subject, message, from_email, [to_email])
+                        print("Login notification email sent successfully!")
+                    except Exception as e:
+                        print(f"Failed to send email: {e}")
+
+                    # Clean up session data
+                    del request.session['otp_secret_key']
+                    del request.session['otp_valid_date']
+                    messages.success(request, "Login successful!")
+                    return redirect('/')
+                else:
+                    messages.error(request, "Invalid OTP. Please try again.")
+            else:
+                messages.error(request, "OTP expired. Please try again.")
+        else:
+            messages.error(request, "Opps, something went wrong. Please try again.")
+
+    return render(request, 'user/otp.html',{})
 
 
 def user_logout(request):
     if request.user.is_authenticated:
         logout(request)
+        messages.success(request, 'You have successfully logged out!')
     return redirect('/')
  
     

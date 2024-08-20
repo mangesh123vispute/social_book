@@ -9,4 +9,5 @@ urlpatterns = [
     path('upload/', views.upload_file,name='upload'),
     path('uploaded_files/', views.uploaded_files,name='uploaded_files'),
     path('profile', views.user_profile,name='profile'),
+    path('otp/', views.otp_view,name='otp'),
 ]
