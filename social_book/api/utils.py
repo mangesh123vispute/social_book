@@ -22,4 +22,4 @@ def send_otp(request,user):
     except Exception as e:
         print(f"Failed to send email: {e}")
 
-    print(f"Your one time password is {otp}")
+

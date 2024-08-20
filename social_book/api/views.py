@@ -67,7 +67,6 @@ def user_login(request):
 
 def otp_view(request):
     if request.method == 'POST':
-        print('I am getting called',request.POST)
         otp = request.POST['otp']
         username=request.session['username']
         otp_secret_key=request.session['otp_secret_key']
@@ -80,8 +79,7 @@ def otp_view(request):
                 if totp.verify(otp):
                     user = get_object_or_404(User, username=username)
                     login(request, user)
-                    print("Login successful!")
-
+              
                      # Send email notification
                     subject = 'Login Successful'
                     message = 'You have successfully logged in to your account.'
