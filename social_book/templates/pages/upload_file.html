@@ -16,70 +16,86 @@
 <div class="main-container">
     <div class="pd-ltr-20 xs-pd-20-10">
         <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h4>Upload Books</h4>
+                        </div>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Upload Books</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <small class="breadcrumb-item active"><i>Upload books in pdf or jpeg format only !!</i></small>
+                </div>
+            </div>
             <!-- Default Basic Forms Start -->
             <div class="pd-20 card-box mb-30">
                 <div class="clearfix">
                     <div class="pull-left">
                         <h4 class="text-blue h4">Upload Books</h4>
-                        <p class="mb-30">Upload books in pdf or jpeg format only !!</p>
                     </div>
                 </div>
                 <form method="post" enctype="multipart/form-data">
-                     {% csrf_token %} 
+                    {% csrf_token %} 
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Title</label>
                         <div class="col-sm-12 col-md-10">
-                            {% comment %} <input class="form-control" type="text" placeholder="Johnny Brown"> {% endcomment %}
-							{{form.title}}
+                            {{form.title}}
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Discription</label>
+                        <label class="col-sm-12 col-md-2 col-form-label">Description</label>
                         <div class="col-sm-12 col-md-10">
-                            {% comment %} <input class="form-control" placeholder="Search Here" type="search"> {% endcomment %}
-							{{form.description}}
+                            {{form.description}}
                         </div>
                     </div>
-					 <div class="form-group row">
+                    <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Year Published</label>
                         <div class="col-sm-12 col-md-10">
-                            {% comment %} <input class="form-control" value="password" type="password"> {% endcomment %}
-							{{form.year_published}}
+                            {{form.year_published}}
                         </div>
                     </div>
-					   <div class="form-group row">
+                    <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Price</label>
                         <div class="col-sm-12 col-md-10">
-                            {% comment %} <input class="form-control" value="1-(111)-111-1111" type="tel"> {% endcomment %}
-							{{form.cost}}
+                            {{form.cost}}
                         </div>
                     </div>
-					    <div class="form-group row">
+                    <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Visibility</label>
                         <div class="col-sm-12 col-md-10">
-                            {% comment %} <input class="form-control" value="https://getbootstrap.com" type="url"> {% endcomment %}
-                        {{form.visibility}}
-						</div>
+                            {{form.visibility}}
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Upload File</label>
                         <div class="col-sm-12 col-md-10">
-                            {% comment %} <input class="form-control" value="bootstrap@example.com" type="email"> {% endcomment %}
-							{{form.file}}
+                            {{form.file}}
                         </div>
                     </div>
-                
-                   <button type="submit" class="btn btn-success mt-3">Submit</button>
+                    <button type="submit" class="btn btn-success mt-3">Submit</button>
                 </form>
                 
-
+            
+            </div>
+            <div class="footer-wrap pd-20 mb-20 card-box">
+				SocialBooks - Interactive Reading Community Dashboard By  <a href="https://github.com/mangesh123vispute" target="_blank">Mangesh Vispute</a>
+			</div>
+            <!-- Default Basic Forms End -->
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block script %}
-
-	<script src="{% static 'vendors/scripts/core.js' %}"></script>
-	<script src="{% static 'vendors/scripts/script.min.js' %}"></script>
-	<script src="{% static 'vendors/scripts/process.js' %}"></script>
-	<script src="{% static 'vendors/scripts/layout-settings.js' %}"></script>
-
+<script src="{% static 'vendors/scripts/core.js' %}"></script>
+<script src="{% static 'vendors/scripts/script.min.js' %}"></script>
+<script src="{% static 'vendors/scripts/process.js' %}"></script>
+<script src="{% static 'vendors/scripts/layout-settings.js' %}"></script>
 {% endblock %}
